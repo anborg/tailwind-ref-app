@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Bookmark Landing Page</title>
+  </head>
+  <body class="font-Poppins">
+    <!-- Header -->
+    <header>
+      <nav class="container flex item-center py-4 mt-4 sm:mt-12">
+        <div class="py-1"><img src="images/logo-bookmark.svg" alt="" /></div>
+        <ul
+          class="hidden sm:flex flex-1 justify-end items-center gap-12 text-bookmark-blue uppercase text-xs"
+        >
+          <li class="cursor-pointer">Features</li>
+          <li class="cursor-pointer">Pricing</li>
+          <li class="cursor-pointer">Contact</li>
+          <button
+            type="button"
+            class="bg-bookmark-red text-white rounded-md px-7 py-3 uppercase"
+          >
+            Login
+          </button>
+        </ul>
+
+        <div class="flex sm:hidden flex-1 justify-end">
+          <i class="text-2xl fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <!-- Hero  -->
+    <section class="relative">
+      <div class="container flex flex-col-reverse lg:flex-row items-ceter gap-12 mt-14 lt:mt-28"
+      >
+        <!-- Content  -->
+        <div class="flex flex-1 flex-col items-center lg:items-start">
+          <h2
+            class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6"
+          >
+            A Simple Bookmark Manager
+          </h2>
+          <p class="text-bookmark-grey text-lg text-cemter lg:text-left mbn-6">
+            A clean and simple interface to organize your favourite websites. Open a new browser tab and see it load instatnly. Try it for free.
+          </p>
+
+          <div class="flex justify-center flex-wrap gap-6">
+            <button class="btn btn-purple hover:bg-bookmark-white hover:text-black">Get it on Chrome</button>
+            <button class="btn btn-white  hover:bg-bookmark-purple hover:text-white">Get it on Firefox</button>
+          </div>
+            
+        </div>
+        <!-- Image  -->
+        <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
+          <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./images/hero-bg.png"></img>
+        </div>
+        
+
+      </div>
+      <!-- Rounded rectangle 
+      - dont show on smaller screen
+      - medium screen visible as display block
+      - hiden any overflow of this rectangle
+      - purple
+      - Rect left side rounded-full show 
+      - override relative[inherritted], and set to absolute
+      - Not yet visible, so now set specific height/width
+      - wideth 50% 2/3 - now it shows below the img. 
+      - now push top to -32 (under-lap with img)
+      - right justify right-0
+    -->
+      <div class="
+      hidden md:block overflow-hidden 
+      bg-bookmark-purple rounded-l-full absolute 
+      h-80 w-2/4 top-32 right-0 lg:-bottom-28 
+      lg:-right-35"></div>
+    </section>
+    <!-- Features Section
+    - lighter shade for section - alternates from white background in HERO.
+    - padding on top bottom margin  20
+    - largecreen more margin.
+      
+    -->
+    <section class="bg-bookmark-white py-20 mt-20 lg:mt-60">
+      <!-- HEADING
+        - and 3 different features in it
+        - for small screen w-3/4 75%
+        - for large sreen 5/12 44%
+        - to pusition in middle mx-auto
+        - padding sides px-2
+      -->
+      <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+        <!-- 3xl center blue-->
+        <h1 class="text-3xl text-center text-bookmark-blue">Features</h1>
+        <!-- Para center,  grey , a gap from headring mt-4 -->
+        <p class="text-center text-bookmark-grey mt-4">
+          Our aim is to make it quick and easy for you to access your favorite websites.  Your bookmarks sync between your devices os you can access them on the go.
+        </p>
+      </div>
+      <!-- Feature #1
+        - littlebit more separation on large screen mt-24
+      -->
+      <div class="relative mt-20 lg:mt-24">
+        <!-- Container 
+         on lg go for flex-row
+         give gap only on x x-24
+        saimiarl to Hero sectiom
+        -->
+        <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+            <!-- Image 
+            z index so it can float z-10
+            lg screen no margin in bottom
+            -->
+            <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+              <!-- Copy paste from hero-img -->
+              <img src="./images/illustration-features-tab-1.png" alt="" class="w-5/6 sm:h-3/4 md:w-full md:h-full">
+            </div>
+            <!-- Feature1 Content 
+              -lg item-start why?
+            -->
+            <div class="flex flex-1 flex-col items-center lg:items-start">
+              
+              <h1 class="text-3xl text-bookmark-blue">Bookmark in one click</h1>
+              <!-- Once in lg revert from text-center to text-left. 
+              on sm 3/4, on lg full -->
+              <p class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                Organize yoru bookmarks however you like.  Our simple drag-and-drop interface gives you complete control over how you manage your favorite sites.
+              </p>
+              <!-- Paste purple button form Hero section -->
+              <button class="btn btn-purple hover:bg-bookmark-white hover:text-black">More info</button>
+              <!-- Copypaste rounder rectangle from HERO
+              change block from md to lg
+              change rounded-l to rounded-r
+              get rid of top and right, as we only display on lg
+              remove lg from bottom 
+              change the justification to left so it is opposite of previous section, and therfore visually balancing.
+            -->
+
+              <div class="
+              hidden 
+              lg:block overflow-hidden 
+              bg-bookmark-purple rounded-r-full absolute 
+              h-80 w-2/4 
+              -bottom-24 
+              -left-36"></div>
+            </div>
+
+        </div>
+      </div>
+      <!-- Feature #2
+      copy feature 1
+      change to lg:mt-52
+      -->
+      <div class="relative mt-20 lg:mt-24">
+        <!-- Container Ref Feature1
+          - flipflop the content-image: lg:flex-row-reverse
+          - flipflop rect from -left-36 to -right-36
+          - flip the round FROM round-r-full to round-l-full 
+        -->
+        <div class="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
+            <!-- Image Ref Feature1
+            -->
+            <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+              <!-- Copy paste from hero-img -->
+              <img src="./images/illustration-features-tab-2.png" alt="" class="w-5/6 sm:h-3/4 md:w-full md:h-full">
+            </div>
+            <!-- Feature-Content Ref Feature1 
+              -lg item-start why?
+            -->
+            <div class="flex flex-1 flex-col items-center lg:items-start">
+              <!-- Heading for feature -->
+              <h1 class="text-3xl text-bookmark-blue">Intelligent search</h1>
+              <!-- Content paragraph. Ref Feature1 -->
+              <p class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                Our powerful search feature will help you find saved sites in no time at all.  No need to crawl through all of your bookmarks.
+              </p>
+              <!-- Ref Feature1 -->
+              <button class="btn btn-purple hover:bg-bookmark-white hover:text-black">More info</button>
+              <!-- Rounded Rectangle Ref Feature1-->
+              <div class="
+              hidden 
+              lg:block overflow-hidden 
+              bg-bookmark-purple rounded-l-full absolute 
+              h-80 w-2/4 
+              -bottom-24 
+              -right-36"></div>
+            </div>
+
+        </div>
+      </div>
+      <!-- Feature #3-->
+      <!-- Feature #3
+      copy feature 1
+      change to lg:mt-52
+      -->
+      <div class="relative mt-20 lg:mt-24">
+        <!-- Container Ref Feature1
+          - flipflop the content-image: lg:flex-row-reverse
+          - flipflop rect from -left-36 to -right-36
+          - flip the round FROM round-r-full to round-l-full 
+        -->
+        <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+            <!-- Image Ref Feature1
+            -->
+            <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+              <!-- Copy paste from hero-img -->
+              <img src="./images/illustration-features-tab-3.png" alt="" class="w-5/6 sm:h-3/4 md:w-full md:h-full">
+            </div>
+            <!-- Feature-Content Ref Feature1 
+              -lg item-start why?
+            -->
+            <div class="flex flex-1 flex-col items-center lg:items-start">
+              <!-- Heading for feature -->
+              <h1 class="text-3xl text-bookmark-blue">Share your bookmarks</h1>
+              <!-- Content paragraph. Ref Feature1 -->
+              <p class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full">
+                Easily share your bookmarks and collections with others.  Create a sharable link that you can send with a click of a button.
+              </p>
+              <!-- Ref Feature1 -->
+              <button class="btn btn-purple hover:bg-bookmark-white hover:text-black">More info</button>
+              <!-- Rounded Rectangle Ref Feature1-->
+              <div class="
+              hidden 
+              lg:block overflow-hidden 
+              bg-bookmark-purple rounded-r-full absolute 
+              h-80 w-2/4 
+              -bottom-24 
+              -left-36"></div>
+            </div>
+
+        </div>
+      </div>  
+    </section>
+
+    <!-- Download  -->
+    <section class="py-20 mt-20">
+      <!-- Heading: Copy from Features sectio beginning -->
+      <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+        <!-- 3xl center blue-->
+        <h1 class="text-3xl text-center text-bookmark-blue">Download the extensions</h1>
+        <!-- Para center,  grey , a gap from headring mt-4 -->
+        <p class="text-center text-bookmark-grey mt-4">
+          We've got more browsers in the pipeline. Please do let us know if you've got a favorite you'd like us to provide
+        </p>
+      </div>
+      <!-- Container for our cards GRID - ie browser n buttons
+      - mobile first so grid-cols-1
+      - md: cols-2... cols-3
+      - give a gap 16 between cards, 
+      - constraint the width - max=odtj
+      -->
+      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
+        <!-- Card1
+          margin is important, otherwise cards will not be in same line.
+         -->
+         <div class="flex flex-col rounded-md shadow-md">
+          <div class="p-6 flex flex-col items-center">
+            <img src="images/logo-chrome.svg" alt="">
+            <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Chrome</h3>
+            <p class="mb-2 text-bookmark-grey font-light">
+              Minimum version 62
+            </p>
+          </div>
+          <!-- HR -->
+          <hr class="border-b border-bookmark-white"/>
+          <!-- Button -->
+          <div class="flex p-6">
+            <!-- Putt flex-1 so button can take entire space of card -->
+            <button type="button" class="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black">
+              Add & Install Extension
+            </button>
+          </div>
+         </div>
+         <!-- Card2 : copy from card1 -->
+         <div class="flex flex-col rounded-md shadow-md">
+          <div class="p-6 flex flex-col items-center">
+            <img src="images/logo-firefox.svg" alt="">
+            <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Firefox</h3>
+            <p class="mb-2 text-bookmark-grey font-light">
+              Minimum version 62
+            </p>
+          </div>
+          <!-- HR -->
+          <hr class="border-b border-bookmark-white"/>
+          <!-- Button -->
+          <div class="flex p-6">
+            <!-- Putt flex-1 so button can take entire space of card -->
+            <button type="button" class="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black">
+              Add & Install Extension
+            </button>
+          </div>
+         </div>
+         <!-- Card3 : copy from card1 -->
+         <div class="flex flex-col rounded-md shadow-md">
+          <div class="p-6 flex flex-col items-center">
+            <img src="images/logo-opera.svg" alt="">
+            <h3 class="mt-5 mb-2 text-bookmark-blue text-lg">Add to Opera</h3>
+            <p class="mb-2 text-bookmark-grey font-light">
+              Minimum version 62
+            </p>
+          </div>
+          <!-- HR -->
+          <hr class="border-b border-bookmark-white"/>
+          <!-- Button -->
+          <div class="flex p-6">
+            <!-- Putt flex-1 so button can take entire space of card -->
+            <button type="button" class="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black">
+              Add & Install Extension
+            </button>
+          </div>
+         </div>
+
+      </div>
+    </section>
+  </body>
+</html>
